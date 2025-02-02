@@ -1,0 +1,5 @@
+[
+  "test_important_questions.py::TestImportantQuestionsOnStartPage::test_of_opening_the_answer_to_1_question",
+  "test_logo_in_head.py::TestWorkLogoYaAndScooter::test_click_on_logo_scooter_in_head",
+  "test_logo_in_head.py::TestWorkLogoYaAndScooter::test_click_on_logo_ya_in_head"
+]
