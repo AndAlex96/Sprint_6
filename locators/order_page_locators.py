@@ -1,6 +1,9 @@
 from selenium.webdriver.common.by import By
 
 class OrderPageLocators:
+    logo_ya_in_head = [By.CLASS_NAME, 'Header_LogoYandex__3TSOI']
+    logo_scooter_in_head = [By.CLASS_NAME, 'Header_LogoScooter__3lsAR']
+
     name_input = [By.CSS_SELECTOR, "input[placeholder='* Имя']"]
     surname_input = [By.CSS_SELECTOR, "input[placeholder='* Фамилия']"]
     address_input = [By.CSS_SELECTOR, "input[placeholder='* Адрес: куда привезти заказ']"]
