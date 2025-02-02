@@ -2,3 +2,4 @@
 .idea/
 __pycache__/
 */__pycache__/
+git rm --cached -r tests\__pycache__\
