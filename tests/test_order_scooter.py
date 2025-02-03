@@ -3,6 +3,7 @@ import allure
 from conftest import driver
 from pages.order_page import OrderPage
 from pages.start_page import StartPage
+from start_page_locators import StartPageLocators
 
 
 class TestOrderScooter:
