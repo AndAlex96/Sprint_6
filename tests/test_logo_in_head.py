@@ -1,7 +1,6 @@
 from conftest import driver
 from pages.order_page import OrderPage
 from pages.start_page import StartPage
-from pages.start_page import BasePage
 import allure
 
 
@@ -11,7 +10,7 @@ class TestWorkLogoYaAndScooter:
     def test_click_on_logo_ya_in_head(self, driver):
         order_page = OrderPage(driver)
         start_page = StartPage(driver)
-        base_page = BasePage(driver)
+
         start_page.click_on_upper_button_order()
         order_page.filling_out_the_first_form('Андрей', 'Плотников', 'Королева 10', 'Черкизовская', '88008008080')
         order_page.click_on_next_button()
@@ -22,13 +21,12 @@ class TestWorkLogoYaAndScooter:
         order_page.click_look_to_status_button()
 
         order_page.click_on_logo_ya_in_head()
-        base_page.assert_current_url_new_window(URL='https://dzen.ru/?yredirect=true')
+        order_page.assert_current_url_new_window(URL='https://dzen.ru/?yredirect=true')
 
     @allure.title('Проверка открытия главной страницы сервиса при нажатии на логотип Самоката')
     def test_click_on_logo_scooter_in_head(self, driver):
         start_page = StartPage(driver)
         order_page = OrderPage(driver)
-        base_page = BasePage(driver)
 
         start_page.click_on_bottom_button_order()
         order_page.filling_out_the_first_form('Андрей', 'Плотников', 'Королева 10', 'Черкизовская', '88008008080')
@@ -39,4 +37,4 @@ class TestWorkLogoYaAndScooter:
 
         order_page.click_look_to_status_button()
         order_page.click_on_logo_scooter_in_head()
-        base_page.assert_current_url(URL='https://qa-scooter.praktikum-services.ru/')
+        order_page.assert_current_url(URL='https://qa-scooter.praktikum-services.ru/')
