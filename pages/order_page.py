@@ -80,3 +80,12 @@ class OrderPage(BasePage):
     def click_look_to_status_button(self):
         self.click_on_element(locator=OrderPageLocators.look_to_status_button)
 
+    @allure.step('Проверка текущего URL для нового окна')
+    def assert_current_url_new_window(self, URL):
+        current_url = self.get_current_url_new_window(URL)
+        assert current_url == URL
+
+    @allure.step('Проверка текущего URL')
+    def assert_current_url(self, URL):
+        current_url = self.get_current_url()
+        assert current_url == URL
