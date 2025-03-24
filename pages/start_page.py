@@ -5,8 +5,8 @@ import allure
 class StartPage(BasePage):
 
     @allure.step('Нажатие на кнопку заказа')
-    def click_on_button_order(self, locator):
-        self.click_on_element(locator=locator)
+    def click_on_button_order(self):
+        self.click_on_element(locator = StartPageLocators.upper_button_order)
 
     @allure.step('Нажимаем на вопрос в разделе Вопросы о важном')
     def click_on_question_button(self, number_question_button):
